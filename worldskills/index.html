@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bean Scene</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+color:#333;
+}
+
+:root{
+--gold:#f3b562;
+--light:#fff6ec;
+}
+
+nav{
+position:absolute;
+top:0;
+width:100%;
+padding:25px 80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+z-index:10;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.signup{
+background:var(--gold);
+padding:8px 18px;
+border-radius:20px;
+color:black;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("img/coffee_image.png");
+background-size:cover;
+background-position:center;
+color:white;
+padding:120px 80px;
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+max-width:550px;
+}
+
+.hero-icon{
+width:120px;
+margin:20px 0;
+}
+
+.hero h1{
+font-family:'Playfair Display';
+font-size:80px;
+}
+
+.hero p{
+margin-bottom:25px;
+line-height:1.6;
+}
+
+.hero img{
+    width: 500px;
+}
+.btn{
+background:var(--gold);
+padding:12px 28px;
+border-radius:25px;
+text-decoration:none;
+color:black;
+}
+
+.discover{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:100px 100px;
+gap:80px;
+}
+
+.discover div{
+max-width:550px;
+}
+
+.discover p{
+margin:20px 0;
+line-height:1.6;
+}
+
+.products{
+background:var(--light);
+padding:80px;
+text-align:center;
+}
+
+.products h2{
+font-family:'Playfair Display';
+font-size:42px;
+}
+
+.section-text{
+max-width:600px;
+margin:15px auto 40px;
+color:#555;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.price{
+color:#777;
+margin-bottom:10px;
+}
+
+.why{
+padding:80px;
+text-align:center;
+}
+
+.why h2{
+font-family:'Playfair Display';
+font-size:40px;
+margin-bottom:10px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+.feature{
+background:var(--light);
+padding:30px;
+border-radius:12px;
+}
+
+.feature-icon{
+width:50px;
+margin-bottom:15px;
+}
+
+.big-text{
+max-width:600px;
+margin:40px auto 10px;
+}
+
+.bold-center{
+display:block;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.cta{
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("img/Group 36.png");
+background-size:cover;
+padding:100px 0 0 90px;
+display:flex;
+align-items:center;
+color:white;
+}
+
+.cta div{
+max-width:500px;
+}
+
+.cta img{
+margin-left:auto;
+height:100%;
+object-fit:contain;
+}
+
+
+
+.cta h2{
+font-family:'Playfair Display';
+font-size:42px;
+}
+
+.cta p{
+margin:20px 0;
+line-height:1.6;
+}
+
+.testimonial{
+padding:80px;
+text-align:center;
+}
+
+.quote{
+background:var(--light);
+padding:40px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+}
+
+.testimonial-img{
+width:80px;
+height:80px;
+border-radius:8px;
+object-fit:cover;
+display:block;
+margin:15px auto 0;
+}
+
+
+.subscribe{
+background:
+linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+url("img/Group 36.png");
+background-size:cover;
+padding:80px;
+text-align:center;
+color:white;
+}
+
+.subscribe input{
+padding:12px;
+width:280px;
+border-radius:5px;
+border:none;
+}
+
+.subscribe button{
+padding:12px 20px;
+background:var(--gold);
+border:none;
+border-radius:5px;
+}
+
+footer{
+background:url("img/fotter_image.png") #1a0f08;
+color:white;
+padding:60px 80px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+}
+
+footer a{
+color:#ccc;
+display:block;
+text-decoration:none;
+margin-bottom:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Bean Scene</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Menu</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Sign In</a></li>
+<li><a class="signup" href="#">Sign Up</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<p>We've got your morning covered with</p>
+<img src="img/Coffee.png" class="hero-icon">
+<p>It is best to start your day with a cup of coffee. Discover the best flavours coffee you will ever have.</p>
+<a class="btn">Order Now</a>
+</div>
+</section>
+
+<section class="discover">
+<div>
+<h2>Discover the best coffee</h2>
+<p>Bean Scene is a coffee shop that provides you with quality coffee that helps boost your productivity and helps build your mood. Having a cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more than others you have ever tasted.</p>
+<a class="btn">Learn More</a>
+</div>
+<img src="img/Mask group.png">
+</section>
+
+<section class="products">
+<h2>Enjoy a new blend of coffee style</h2>
+<p class="section-text">
+Explore all flavours of coffee with us. There is always a new cup worth experiencing
+</p>
+
+<div class="cards">
+
+<div class="card">
+<img src="img/Rectangle 7.png">
+<h4>Cappuccino</h4>
+<p class="price">$8.50</p>
+<a class="btn">Order Now</a>
+</div>
+
+<div class="card">
+<img src="img/Rectangle 9-2.png">
+<h4>Chai Latte</h4>
+<p class="price">$8.50</p>
+<a class="btn">Order Now</a>
+</div>
+
+<div class="card">
+<img src="img/Rectangle 11.png">
+<h4>Macchiato</h4>
+<p class="price">$8.50</p>
+<a class="btn">Order Now</a>
+</div>
+
+<div class="card">
+<img src="img/Rectangle 13.png">
+<h4>Espresso</h4>
+<p class="price">$8.50</p>
+<a class="btn">Order Now</a>
+</div>
+
+</div>
+</section>
+
+<section class="why">
+<h2>Why are we different?</h2>
+<p class="section-text">We don’t just make your coffee, we make your day!</p>
+
+<div class="features">
+
+<div class="feature">
+<img src="img/icon1.png" class="feature-icon">
+<h4>Supreme Beans</h4>
+<p>Best quality beans</p>
+</div>
+
+<div class="feature">
+<img src="img/icon2.png" class="feature-icon">
+<h4>High Quality</h4>
+<p>Premium taste</p>
+</div>
+
+<div class="feature">
+<img src="img/icon3.png" class="feature-icon">
+<h4>Extraordinary</h4>
+<p>Unique flavor</p>
+</div>
+
+<div class="feature">
+<img src="img/icon4.png" class="feature-icon">
+<h4>Affordable Price</h4>
+<p>Low cost</p>
+</div>
+
+</div>
+
+<p class="big-text">
+Great ideas start with great coffee, Lets help you achieve that
+</p>
+
+<strong class="bold-center">Get started today.</strong>
+
+<a class="btn">Join Us</a>
+</section>
+
+<section class="cta">
+<div>
+<h2>Get a chance to have an Amazing morning</h2>
+<p>We are giving you one time opportunity</p>
+<a class="btn">Order Now</a>
+</div>
+<img src="img/Group 61.png" width="500" padding="0">
+</section>
+
+<section class="testimonial">
+<h2>Our coffee perfection feedback</h2>
+<br>
+<div class="quote">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptas praesentium ipsam, labore perferendis nostrum fugiat odit. Totam, placeat possimus nobis quo tempore hic maiores vitae perferendis id laudantium ex commodi similique temporibus facere sit rem mollitia molestias?</p>
+<br>
+<strong>Jonny Thomas</strong>
+<img src="img/Rectangle 9.png" class="testimonial-img">
+</div>
+</section>
+
+<section class="subscribe">
+<h2>Subscribe to get the Latest News</h2>
+<br>
+<input placeholder="Enter your email">
+<button>Subscribe</button>
+</section>
+
+<footer>
+
+<div>
+<h4>Bean Scene</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</div>
+
+<div>
+<h4>About</h4>
+<a>Menu</a>
+<a>Features</a>
+<a>News</a>
+</div>
+
+<div>
+<h4>Company</h4>
+<a>How we work</a>
+<a>Terms</a>
+<a>FAQ</a>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>+012 345 6789</p>
+<p>beanscene@mail.com</p>
+</div>
+
+</footer>
+
+</body>
+</html>
